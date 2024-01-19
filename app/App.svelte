@@ -1,7 +1,7 @@
-<frame>
-    <Home />
-</frame>
-
 <script lang="ts">
-    import Home from './components/Home.svelte'
+  import Pokemon from "./components/Pokemon.svelte";
 </script>
+
+<frame>
+  <Pokemon />
+</frame>
