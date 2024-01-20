@@ -6,12 +6,12 @@
 		android:smallScreens="true"
 		android:normalScreens="true"
 		android:largeScreens="true"
-		android:xlargeScreens="true"/>
+		android:xlargeScreens="true" />
 
-	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-	<uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 	<application
 		android:name="com.tns.NativeScriptApplication"
@@ -21,14 +21,19 @@
 		android:theme="@style/AppTheme"
 		android:hardwareAccelerated="true">
 
+
 		<activity
 			android:name="com.tns.NativeScriptActivity"
 			android:label="@string/title_activity_kimera"
 			android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|locale|uiMode"
 			android:theme="@style/LaunchScreenTheme"
 			android:hardwareAccelerated="true"
-      		android:launchMode="singleTask"
+			android:launchMode="singleTask"
 			android:exported="true">
+
+			<meta-data
+				android:name="com.google.android.geo.API_KEY"
+				android:value="api ky" />
 
 			<meta-data android:name="SET_THEME_ON_LAUNCH" android:resource="@style/AppTheme" />
 
@@ -37,6 +42,6 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-		<activity android:name="com.tns.ErrorReportActivity"/>
+		<activity android:name="com.tns.ErrorReportActivity" />
 	</application>
 </manifest>
