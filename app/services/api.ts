@@ -2,9 +2,9 @@
 import { Http } from "@nativescript/core";
 import { PokemonListApiResponse, PokemonListItem } from "~/types/pokemon";
 
-export const catchemAll = (limit = 100, offest = 0) =>
+export const catchemAll = (name = '', limit = 100, offest = 0) =>
     Http.getJSON<PokemonListApiResponse>(
-        `https://pokeapi.co/api/v2/pokemon?limit=100&offset=0`
+        `https://pokeapi.co/api/v2/pokemon/?limit=100&offset=0`
     ).then(
         (res) => {
             return res.results.map((pokemon) => {

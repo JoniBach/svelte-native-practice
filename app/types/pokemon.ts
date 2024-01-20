@@ -12,3 +12,8 @@ export type PokemonListItem = {
     name: string,
     image: string
 }
+
+export type NavItem = {
+    name: string,
+    description: string
+}
