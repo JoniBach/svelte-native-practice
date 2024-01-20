@@ -15,5 +15,6 @@ export type PokemonListItem = {
 
 export type NavItem = {
     name: string,
-    description: string
+    description: string,
+    Page: string
 }

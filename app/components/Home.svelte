@@ -7,6 +7,7 @@
   import * as api from "../services/api";
   import { NavItem, PokemonListItem } from "~/types/pokemon";
   import Pokemon from "./Pokemon.svelte";
+  import Map from "./Map.svelte";
 
   let data: NavItem[] = [];
 
@@ -16,13 +17,20 @@
       {
         name: "Pokemon List",
         description: "making requests to the pokeAPI",
+        Page: Pokemon,
+      },
+      {
+        name: "Map",
+        description: "using the nativescript-google-maps-sdk",
+        Page: Map,
       },
     ];
   });
 
   function handleTap(event: ItemEventData) {
     navigate({
-      page: Pokemon,
+      page: data[event.index].Page,
+      props: { index: event.index, item: data[event.index] },
     });
   }
 </script>
